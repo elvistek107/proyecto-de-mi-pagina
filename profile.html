@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Perfil · Retro Arch</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <div class="site-shell">
+        <header class="header">
+            <div class="container header__inner">
+                <a href="index.html" class="logo">
+                    <span class="logo__mark">RA</span>
+                    <span class="logo__text">Retro Arch</span>
+                </a>
+                <nav class="nav" id="navMenu">
+                    <a href="index.html" class="nav__link">Inicio</a>
+                    <a href="catalog.html" class="nav__link">Catálogo</a>
+                    <a href="sell.html" class="nav__link">Vender</a>
+                    <a href="profile.html" class="nav__link">Perfil</a>
+                </nav>
+                <div class="header__actions">
+                    <a href="cart.html" class="cart-link" aria-label="Ver carrito">
+                        <span>🛒</span>
+                        <span class="cart-link__count" id="cartCount">0</span>
+                    </a>
+                    <button class="hamburger" id="hamburger" type="button" aria-label="Abrir menú">
+                        <span></span><span></span><span></span>
+                    </button>
+                </div>
+            </div>
+            <div class="container header__search-wrap">
+                <div class="search-shell" id="searchShell">
+                    <span class="search-shell__icon">⌕</span>
+                    <input id="searchInput" class="search-shell__input" type="search"
+                        placeholder="Buscar buzos, jeans..." autocomplete="off" />
+                    <button class="search-shell__clear" id="searchClear" type="button"
+                        aria-label="Limpiar búsqueda">×</button>
+                </div>
+            </div>
+            <div class="search-overlay" id="searchOverlay">
+                <div class="search-overlay__panel">
+                    <div class="search-overlay__section">
+                        <p class="search-overlay__title">Recientes</p>
+                        <button class="search-overlay__pill" data-suggest="Buzo oversized gris">Buzo oversized
+                            gris</button>
+                        <button class="search-overlay__pill" data-suggest="Jeans black">Jeans black</button>
+                    </div>
+                    <div class="search-overlay__section">
+                        <p class="search-overlay__title">Categorías rápidas</p>
+                        <div class="search-overlay__chips">
+                            <button class="search-overlay__chip" data-suggest="Camperas">Camperas</button>
+                            <button class="search-overlay__chip" data-suggest="Jeans Baggy">Jeans Baggy</button>
+                            <button class="search-overlay__chip" data-suggest="Buzos">Buzos</button>
+                            <button class="search-overlay__chip" data-suggest="Remeras">Remeras</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main class="profile-page">
+            <section class="section">
+                <div class="container dashboard-layout">
+                    <aside class="dashboard-sidebar">
+                        <div class="dashboard-sidebar__profile">
+                            <img class="avatar avatar--large"
+                                src="https://images.unsplash.com/photo-1544723795-3fb6469f5b39?auto=format&fit=crop&w=200&q=80"
+                                alt="Perfil" />
+                            <div>
+                                <p class="dashboard-sidebar__label">Cuenta</p>
+                                <h3>Camila R.</h3>
+                            </div>
+                        </div>
+                        <nav class="dashboard-sidebar__nav">
+                            <button class="dashboard-link is-active" data-section="home">Inicio</button>
+                            <button class="dashboard-link" data-section="orders">Mis compras</button>
+                            <button class="dashboard-link" data-section="payments">Pagos</button>
+                            <button class="dashboard-link" data-section="profile">Mi perfil</button>
+                        </nav>
+                        <button class="logout-btn">Cerrar sesión</button>
+                    </aside>
+
+                    <div class="dashboard-content">
+                        <header class="dashboard-header">
+                            <div>
+                                <p class="section__tag">Panel</p>
+                                <h2>¡Hola, Camila!</h2>
+                            </div>
+                            <a href="cart.html" class="cart-link">🛒 2</a>
+                        </header>
+
+                        <section class="dashboard-section is-active" data-panel="home">
+                            <div class="dashboard-welcome">
+                                <div>
+                                    <p class="dashboard-welcome__eyebrow">Resumen</p>
+                                    <h3>Tienes 1 envío en camino</h3>
+                                </div>
+                                <span class="dashboard-pill">Premium</span>
+                            </div>
+                            <div class="dashboard-grid">
+                                <article class="dashboard-card">
+                                    <p class="dashboard-card__label">Último pedido</p>
+                                    <h4>#RA-2048</h4>
+                                    <span class="status status--warning">En camino</span>
+                                </article>
+                                <article class="dashboard-card">
+                                    <p class="dashboard-card__label">Método favorito</p>
+                                    <h4>Visa •••• 4821</h4>
+                                </article>
+                            </div>
+                        </section>
+
+                        <section class="dashboard-section" data-panel="orders">
+                            <div class="dashboard-section__head">
+                                <h3>Historial de compras</h3>
+                            </div>
+                            <div class="order-list">
+                                <article class="order-item">
+                                    <img src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246?auto=format&fit=crop&w=800&q=80"
+                                        alt="Producto" />
+                                    <div>
+                                        <p class="order-item__title">Jeans oversized black</p>
+                                        <p class="order-item__meta">Pedido #RA-2048 · 14 jun</p>
+                                    </div>
+                                    <span class="status status--warning">En camino</span>
+                                </article>
+                                <article class="order-item">
+                                    <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=800&q=80"
+                                        alt="Producto" />
+                                    <div>
+                                        <p class="order-item__title">Remera vintage white</p>
+                                        <p class="order-item__meta">Pedido #RA-1987 · 01 jun</p>
+                                    </div>
+                                    <span class="status status--success">Entregado</span>
+                                </article>
+                            </div>
+                        </section>
+
+                        <section class="dashboard-section" data-panel="payments">
+                            <div class="dashboard-section__head">
+                                <h3>Métodos de pago</h3>
+                            </div>
+                            <div class="payment-list">
+                                <div class="payment-card">
+                                    <span>Visa</span>
+                                    <strong>•••• 4821</strong>
+                                </div>
+                                <div class="payment-card payment-card--muted">
+                                    <span>Mercado Pago</span>
+                                    <strong>Usuario VIP</strong>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="dashboard-section" data-panel="profile">
+                            <div class="dashboard-section__head">
+                                <h3>Mi perfil</h3>
+                            </div>
+                            <div class="profile-settings">
+                                <div class="profile-settings__row">
+                                    <span>Email</span>
+                                    <strong>camila@mail.com</strong>
+                                </div>
+                                <div class="profile-settings__row">
+                                    <span>Teléfono</span>
+                                    <strong>+54 9 11 5555 1122</strong>
+                                </div>
+                                <div class="profile-settings__row">
+                                    <span>Dirección</span>
+                                    <strong>Av. Siempre Viva 123</strong>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <nav class="dashboard-bottom-nav">
+            <button class="dashboard-bottom-nav__item is-active" data-section="home">🏠</button>
+            <button class="dashboard-bottom-nav__item" data-section="orders">🧾</button>
+            <button class="dashboard-bottom-nav__item" data-section="payments">💳</button>
+            <button class="dashboard-bottom-nav__item" data-section="profile">👤</button>
+        </nav>
+
+        <footer class="footer">
+            <div class="container footer__inner">
+                <p>© <span id="year"></span> Retro Arch</p>
+            </div>
+        </footer>
+        <div class="login-modal" id="loginModal" aria-hidden="true">
+            <div class="login-modal__backdrop" data-close-login></div>
+            <div class="login-modal__panel">
+                <button class="login-modal__close" id="closeLogin" type="button"
+                    aria-label="Cerrar inicio de sesión">×</button>
+                <div class="login-modal__brand">
+                    <span class="login-modal__brand-mark">RA</span>
+                </div>
+                <p class="login-modal__eyebrow">¡Qué bueno verte de nuevo!</p>
+                <h3 class="login-modal__title">Ingresa a tu cuenta</h3>
+                <div class="login-modal__actions">
+                    <button class="login-social-btn login-social-btn--google" id="googleLogin" type="button">
+                        <span class="login-social-btn__icon">G</span>
+                        Continuar con Google
+                    </button>
+                    <button class="login-social-btn login-social-btn--apple" data-provider="apple" type="button">
+                        <span class="login-social-btn__icon"></span>
+                        Continuar con Apple
+                    </button>
+                    <button class="login-social-btn login-social-btn--whatsapp" data-provider="whatsapp" type="button">
+                        <span class="login-social-btn__icon">W</span>
+                        Continuar con WhatsApp
+                    </button>
+                    <button class="login-social-btn login-social-btn--magic" data-provider="magic" type="button">
+                        <span class="login-social-btn__icon">✉</span>
+                        Enviar enlace mágico
+                    </button>
+                </div>
+                <div class="login-divider"><span>o usa tu correo</span></div>
+                <form class="login-form" id="loginForm" data-provider="email">
+                    <label class="login-form__field">
+                        <span>Email</span>
+                        <input type="email" name="loginEmail" placeholder="tu@email.com" autocomplete="email"
+                            required />
+                    </label>
+                    <label class="login-form__field login-form__field--phone" hidden>
+                        <span>Número de WhatsApp</span>
+                        <input type="tel" name="phoneNumber" placeholder="+54 9 11 1234 5678" autocomplete="tel" />
+                    </label>
+                    <label class="login-form__field login-form__field--otp" hidden>
+                        <span>Código de verificación</span>
+                        <input type="text" name="otpCode" placeholder="123456" inputmode="numeric" />
+                    </label>
+                    <label class="login-form__field login-form__field--password">
+                        <span>Contraseña</span>
+                        <div class="password-input-wrap">
+                            <input type="password" name="loginPassword" placeholder="••••••••"
+                                autocomplete="current-password" />
+                            <button class="password-toggle" type="button" aria-label="Mostrar contraseña">👁</button>
+                        </div>
+                    </label>
+                    <label class="login-remember">
+                        <input type="checkbox" name="rememberMe" checked />
+                        <span>Mantener sesión iniciada</span>
+                    </label>
+                    <button type="submit" class="btn login-submit-btn btn--block">Ingresar</button>
+                    <p class="login-status" id="loginStatus" role="status" aria-live="polite"></p>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js" defer></script>
+</body>
+
+</html>
